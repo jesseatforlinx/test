@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>04_hardware_design_guide - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "04_hardware_design_guide";
+        var mkdocs_page_input_path = "04_hardware_design_guide.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">i.MX6UL Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../01_Freescal_imx6ul_introduction/">01_Freescal_imx6ul_introduction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">FETMX6UL-C Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >02_FETMX6UL-C</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_FETMX6UL-C/">2.1 FETMX6UL-C核心板外观图</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../02_FETMX6UL-C/#22-fetmx6ul-c">2.2 核心板尺寸图</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../02_FETMX6UL-C/#23">2.3 性能参数</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OKMX6UL-C Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../03_OKMX6UL-C/">03_OKMX6UL-C</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hardware</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">04_hardware_design_guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../05_OKMX6UL-C_power_consumption/">05_OKMX6UL-C_power_consumption</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../06_minimum_system/">06_minimum_system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../07_power_timing/">07_power_timing</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Hardware</li>
+      <li class="breadcrumb-item active">04_hardware_design_guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><strong>1、boot配置方式</strong></p>
+<pre><code>i.MX6UL有多种烧写和启动方式，在系统上电或复位后，通过读取系统启动配置引脚的状态，选择不同的烧写和启动方式。
+
+用户自己设计底板时，一定要加上这部分电路，具体配置方式请参考开发板底板原理图及本手册Boot配置章节。同时提醒用户注意，如果同时需要使用SD卡烧写和eMMC启动两种模式，则一定要加上对LCD_DATA11引脚的控制，否则，可以根据需要，对LCD_DATA11做固定电平处理。
+</code></pre>
+<p><strong>2、PMIC_ON_REQ驱动能力问题</strong></p>
+<pre><code>底板上的GEN_5V和GEN_3.3V都是通过PMIC_ON_REQ引脚的控制来获得的，PMIC_ON_REQ引脚的电流驱动能力太弱，需要使用电压控制型开关元件，开发板中使用的是N沟道场效应管AO3416，同时，该场效应管的栅极必须加下拉电阻，否则管子无法关断。
+</code></pre>
+<p><strong>3、IIC总线加上拉电阻</strong></p>
+<pre><code>用户自己设计底板时，需要注意IIC总线必须加上拉电阻，否则可能导致IIC总线设备不能使用。目前底板上引出的两个IIC总线均通过10K电阻上拉到了3.3V。
+</code></pre>
+<p><strong>4、调试中，出现USB1-1错误</strong></p>
+<pre><code>用户使用USB接口时，需要把USB_OTG1_VBUS和USB_OTG2_VBUS连接到5V，否则会报错。目前底板上，这两个引脚都通过一个0Ω电阻，连接到了GEN_5V上。
+</code></pre>
+<p><strong>5、耳机检测引脚</strong></p>
+<pre><code>音频芯片WM8960的7脚是耳机检测引脚，需要连接到核心板的AUD_INT引脚上，否则可能导致插入耳机不识别。
+</code></pre>
+<p><strong>6、CAN电路RX引脚输出电平</strong></p>
+<pre><code>目前开发板默认使用的CAN收发器芯片是MCP2551，该芯片的RX端输出电平为5V，而CPU该引脚的电平为3.3V，为不影响CPU内部的3.3V电源，需要在芯片的RX端对地串联电阻分压，再接入CPU 。
+</code></pre>
+<p><strong>7、SDIO接口设计</strong></p>
+<pre><code>SD卡时钟线上的串联电阻R2阻值，经验证为33Ω，且要靠近核心板插座放置。SD卡的信号线，在PCB布线时，需要做阻抗控制和等长处理，否则可能导致部分SD卡不识别。SD卡的信号线上，要加上拉电阻，防止总线浮动。
+</code></pre>
+<p><strong>8、调试串口的CTS与RTS引脚</strong></p>
+<pre><code>开发板调试过程中发现，如果调试串口的RTS和CTS与DB9座连接，且上电通信后，则在开发板断电后，电脑串口的CTS引脚会通过MAX3232芯片给GEN_3.3V网络供电，这个电压会导致SD卡的复位响应不正常，造成SD卡无法识别。目前开发板上，用两个0Ω电阻将这两个引脚跳开了。用户自己设计底板时，可以使用三线调试串口。
+</code></pre>
+<p><strong>9、如何防止开发板未上电时插入Micro USB线，电脑给开发板供电。</strong></p>
+<pre><code>请参考本手册USB OTG接口章节。
+</code></pre>
+<p><strong>10、用户没有用到的引脚请做悬空处理。</strong></p>
+<p><strong>11、开发板支持4.3吋屏方法</strong></p>
+<p>如果使用本公司的4.3吋屏，或所配液晶屏必须使用行场同步信号，则硬件需做如下修改：加焊0603 0Ω电阻 R20、R21，去掉R102。</p>
+<p>修改后，USB OTG接口只能用作device，不能用作host。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../03_OKMX6UL-C/" class="btn btn-neutral float-left" title="03_OKMX6UL-C"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../05_OKMX6UL-C_power_consumption/" class="btn btn-neutral float-right" title="05_OKMX6UL-C_power_consumption">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../03_OKMX6UL-C/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../05_OKMX6UL-C_power_consumption/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
