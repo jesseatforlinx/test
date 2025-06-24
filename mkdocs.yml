@@ -1,19 +1,19 @@
 site_name: My Docs
 nav:
   - i.MX6UL Introduction: 
-    - 01_Freescal_imx6ul_introduction: 01_Freescal_imx6ul_introduction.md
+    - 01_Freescal_imx6ul_introduction: 6UL/01_Freescal_imx6ul_introduction.md
   - FETMX6UL-C Introduction:
     - 02_FETMX6UL-C: 
-      - 2.1 FETMX6UL-C核心板外观图: 02_FETMX6UL-C.md
-      - 2.2 核心板尺寸图: 02_FETMX6UL-C/#22-fetmx6ul-c
-      - 2.3 性能参数: 02_FETMX6UL-C/#23
+      - 2.1 FETMX6UL-C核心板外观图: 6UL/02_FETMX6UL-C.md
+      - 2.2 核心板尺寸图: 6UL/02_FETMX6UL-C/#22-fetmx6ul-c
+      - 2.3 性能参数: 6UL/02_FETMX6UL-C/#23
   - OKMX6UL-C Introduction:
-    - 03_OKMX6UL-C: 03_OKMX6UL-C.md
+    - 03_OKMX6UL-C: 6UL/03_OKMX6UL-C.md
   - Hardware:
-    - 04_hardware_design_guide: 04_hardware_design_guide.md
-    - 05_OKMX6UL-C_power_consumption: 05_OKMX6UL-C_power_consumption.md
-    - 06_minimum_system: 06_minimum_system.md
-    - 07_power_timing: 07_power_timing.md
+    - 04_hardware_design_guide: 6UL/04_hardware_design_guide.md
+    - 05_OKMX6UL-C_power_consumption: 6UL/05_OKMX6UL-C_power_consumption.md
+    - 06_minimum_system: 6UL/06_minimum_system.md
+    - 07_power_timing: 6UL/07_power_timing.md
 theme:
   name: readthedocs
   highlightjs: true

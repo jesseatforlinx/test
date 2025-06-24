@@ -4,21 +4,21 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>06_minimum_system - My Docs</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>07_power_timing - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "06_minimum_system";
-        var mkdocs_page_input_path = "06_minimum_system.md";
+        var mkdocs_page_name = "07_power_timing";
+        var mkdocs_page_input_path = "6UL\\07_power_timing.md";
         var mkdocs_page_url = null;
       </script>
     
     <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
+      <script src="../../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
@@ -31,9 +31,9 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> My Docs
+          <a href="../.." class="icon icon-home"> My Docs
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -69,11 +69,9 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../05_OKMX6UL-C_power_consumption/">05_OKMX6UL-C_power_consumption</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">06_minimum_system</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../06_minimum_system/">06_minimum_system</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../07_power_timing/">07_power_timing</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">07_power_timing</a>
                   </li>
               </ul>
       </div>
@@ -83,15 +81,15 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">My Docs</a>
+          <a href="../..">My Docs</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Hardware</li>
-      <li class="breadcrumb-item active">06_minimum_system</li>
+      <li class="breadcrumb-item active">07_power_timing</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -100,17 +98,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="_1">最小系统原理图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<hr />
-<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/50461850/1742524079213-f847bbc4-776c-4673-a2a1-aeddf9597815.png" /></p>
-<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/50461850/1742524079337-ab34c16d-1b41-46eb-ac53-aabacb654909.png" /></p>
-<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/50461850/1742524079435-5dc31a35-545f-4b0f-9de8-84f7ea08c635.png" /></p>
+                <p><font style="color:#ff0000;">     </font>目前开发板的上电时序是：5V经过自恢复保险丝、防反接二极管、过压保护电路，首先VDD_5V、VDD_3V3上电，因此核心板先上电。核心板上电后通过CPU的PMIC_ON_REQ引脚控制底板GEN_5V和GEN_3V3上电；CPU的PERI_PWREN控制VPERI_3V3上电，并通过U11转为NVCC_CSI给摄像头部分供电。（<font style="color:#ff0000;">注：具体控制原理见3.5.1章节</font>）</p>
+<p>精简电路参考如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/50461850/1742524080905-00d21745-6296-4ef8-a59a-9f4583b7dee8.png" /></p>
+<p><strong>注：</strong></p>
+<p><strong>1、如果客户供电稳定则可去掉OVP保护电路；</strong></p>
+<p><strong>2、核心板i.MX6UL-CSI部分的电压（NVCC_CSI）由底板供电。客户可以根据自己使用的外设的引脚电平来进行配置。例如外接2.8V的摄像头，则需要使用XC6219B282MR芯片转成2.8V给NVCC_CSI供电；如果所接外设引脚电平为3.3V，则不需要使用XC6219B282MR芯片，直接由GEN_3V3给NVCC_CSI供电；</strong></p>
+<p><strong>3、选择启动配置的拨码开关部分由GEN_3V3供电。</strong></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../05_OKMX6UL-C_power_consumption/" class="btn btn-neutral float-left" title="05_OKMX6UL-C_power_consumption"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../07_power_timing/" class="btn btn-neutral float-right" title="07_power_timing">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../06_minimum_system/" class="btn btn-neutral float-left" title="06_minimum_system"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -133,18 +132,16 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../05_OKMX6UL-C_power_consumption/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../06_minimum_system/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../07_power_timing/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
