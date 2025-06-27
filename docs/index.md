@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# FORLINX Documentation Library
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For product information please visit [www.forlinx.net](https://www.forlinx.net).
 
-## Commands
+## Table of Content
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### NXP Series
+[i.MX8M Plus](nxp/6UL/03_OKMX6UL-C.md)
 
-## Project layout
+[i.MX8M Mini](nxp/6UL/03_OKMX6UL-C.md)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+[i.MX6UL](nxp/6UL/04_hardware_design_guide.md)
+
+### Rockchip Series
+[RK3576](rockchip/3576.md)
+
+### TI Series
+[AM6254](rockchip/3576.md)
+
+### Allwinner Series
+[T507](rockchip/3576.md)
+

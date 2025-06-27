@@ -8,20 +8,20 @@ nav:
         - Hardware: nxp/6UL/03_OKMX6UL-C.md
         - Software Manual: nxp/6UL/04_hardware_design_guide.md
         - OS Compilation Manual: nxp/imx8/imx8mm.md
-        - Application Notes: rockchip/3576.md
+        
       - i.MX8:
         - i.MX8MP: 
           - Hardware: nxp/6UL/03_OKMX6UL-C.md
           - Software Manual: nxp/6UL/04_hardware_design_guide.md
           - OS Compilation Manual: nxp/imx8/imx8mm.md
-          - Application Notes: rockchip/3576.md
-          - i.MX8MM: nxp/imx8/imx8mm.md
+          
+         
         - i.MX8MM: 
           - Hardware: nxp/6UL/03_OKMX6UL-C.md
           - Software Manual: nxp/6UL/04_hardware_design_guide.md
           - OS Compilation Manual: nxp/imx8/imx8mm.md
-          - Application Notes: rockchip/3576.md
-          - i.MX8MM: nxp/imx8/imx8mm.md
+         
+          
     - Rockchip:
       - RK3576: rockchip/3576.md
       - RK3568: rockchip/3568.md
