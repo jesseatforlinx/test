@@ -30,7 +30,7 @@ nav:
 
   
 theme:
-  name: cinder
+  name: readthedocs
   highlightjs: true
   hljs_languages:
     - yaml
