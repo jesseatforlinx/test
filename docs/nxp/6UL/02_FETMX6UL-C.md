@@ -2,14 +2,14 @@
 ## 2.1  FETMX6UL-C核心板外观图
 	Nand Flash方案：
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/45534235/1720509407290-25e8514e-ce6e-4008-b3d5-2fdce3bbfed5.jpeg)
+![](../../img/image.jpeg)
 
 	eMMC方案：
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/45534235/1720509407669-be3c40e9-7fec-4f8c-bf93-efd3eded229f.jpeg)
+![](../../img/image (3).jpeg)
 
 ## 2.2  FETMX6UL-C核心板尺寸图
-![](https://cdn.nlark.com/yuque/0/2024/png/45534235/1720509408050-e8509073-5452-4af3-b119-813fc5159ebb.png)![](https://cdn.nlark.com/yuque/0/2024/png/45534235/1720509408291-ba416fd5-38ac-4f4b-9979-558373d52271.png)
+![](../../img/image (4).png)![](../../img/image (5).png)
 
 
 
@@ -101,9 +101,9 @@
 
 ## 2.5  FETMX6UL-C核心板引脚定义
 ### 2.5.1  FETMX6UL-C核心板引脚原理图
-![](https://cdn.nlark.com/yuque/0/2024/png/45534235/1720509408520-51543db8-93f5-404b-ad17-bc7e2d152e19.png)
+![](../../img/image (6).png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/45534235/1720509409078-e0eb79e0-c423-4524-a70e-cec5ad1e2992.png)
+![](../../img/image (7).png)
 
 ### 2.5.2  FETMX6UL- C核心板引脚功能说明
 **注1：**

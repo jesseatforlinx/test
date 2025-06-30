@@ -26,11 +26,11 @@ Freescale i.MX6UltraLite扩展了i.MX6系列，它是一个高性能、超高效
 
 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/45534235/1720509425286-70b59293-3de7-4eac-adbc-f949536af53a.png)
+![](../../img/image (1).png)
 
 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/45534235/1720509425540-732781ff-769a-4de3-8487-ff9c0298b7f1.png)
+![](../../img/image (2).png)
 
    FETMX6UL-C核心板CPU采用的是MCIMX6G2。
 

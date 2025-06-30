@@ -6,8 +6,8 @@ nav:
     - NXP:
       - i.MX6UL:
         - Hardware: nxp/6UL/03_OKMX6UL-C.md
-        - Software Manual: nxp/6UL/04_hardware_design_guide.md
-        - OS Compilation Manual: nxp/imx8/imx8mm.md
+        - Software Manual: nxp/6UL/02_FETMX6UL-C.md
+        - OS Compilation Manual: nxp/6UL/01_Freescal_imx6ul_introduction.md
         
       - i.MX8:
         - i.MX8MP: 
