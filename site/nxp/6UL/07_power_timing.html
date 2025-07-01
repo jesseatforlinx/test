@@ -1,343 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="writer-html5" lang="en" >
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    
-    <link rel="shortcut icon" href="../../img/favicon.ico">
-
-    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
     <title>07 power timing - Forlinx Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../css/base.min.css" rel="stylesheet">
-    <link href="../../css/cinder.min.css" rel="stylesheet">
-
+      <script>
+        // Current page data
+        var mkdocs_page_name = "07 power timing";
+        var mkdocs_page_input_path = "nxp\\6UL\\07_power_timing.md";
+        var mkdocs_page_url = null;
+      </script>
     
-        
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
-    
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-        <![endif]-->
-
-    
-
-     
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
-<body>
+<body class="wy-body-for-nav" role="document">
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-
-            
-              <a class="navbar-brand" href="../../index.html">Forlinx Documentation</a>
-            
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="../../index.html">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NXP <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">i.MX6UL</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="03_OKMX6UL-C.html">Hardware</a>
-</li>
-
-        
-            
-<li >
-    <a href="02_FETMX6UL-C.html">Software Manual</a>
-</li>
-
-        
-            
-<li >
-    <a href="01_Freescal_imx6ul_introduction.html">OS Compilation Manual</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                        
-                            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">i.MX8</a>
-    <ul class="dropdown-menu">
-        
-            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">i.MX8MP</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="03_OKMX6UL-C.html">Hardware</a>
-</li>
-
-        
-            
-<li >
-    <a href="04_hardware_design_guide.html">Software Manual</a>
-</li>
-
-        
-            
-<li >
-    <a href="../imx8/imx8mm.html">OS Compilation Manual</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">i.MX8MM</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="03_OKMX6UL-C.html">Hardware</a>
-</li>
-
-        
-            
-<li >
-    <a href="04_hardware_design_guide.html">Software Manual</a>
-</li>
-
-        
-            
-<li >
-    <a href="../imx8/imx8mm.html">OS Compilation Manual</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-    </ul>
-  </li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rockchip <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../rockchip/3576.html">RK3576</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../rockchip/3568.html">RK3568</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">TI <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../ti/6254.html">FET6254-C</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Search
-                        </a>
-                    </li>
-            </ul>
-        </div>
-    </div>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html" class="icon icon-home"> Forlinx Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-    <div class="container">
-        
-        
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">NXP</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >i.MX6UL</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="03_OKMX6UL-C.html">Hardware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="02_FETMX6UL-C.html">Software Manual</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="01_Freescal_imx6ul_introduction.html">OS Compilation Manual</a>
+                </li>
     </ul>
-</div></div>
-        <div class="col-md-9" role="main">
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >i.MX8</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >i.MX8MP</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="03_OKMX6UL-C.html">Hardware</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="04_hardware_design_guide.html">Software Manual</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../imx8/imx8mm.html">OS Compilation Manual</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >i.MX8MM</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="03_OKMX6UL-C.html">Hardware</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="04_hardware_design_guide.html">Software Manual</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../imx8/imx8mm.html">OS Compilation Manual</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Rockchip</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rockchip/3576.html">RK3576</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rockchip/3568.html">RK3568</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ti/6254.html">FET6254-C</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
 
-<p><font style="color:#ff0000;">     </font>目前开发板的上电时序是：5V经过自恢复保险丝、防反接二极管、过压保护电路，首先VDD_5V、VDD_3V3上电，因此核心板先上电。核心板上电后通过CPU的PMIC_ON_REQ引脚控制底板GEN_5V和GEN_3V3上电；CPU的PERI_PWREN控制VPERI_3V3上电，并通过U11转为NVCC_CSI给摄像头部分供电。（<font style="color:#ff0000;">注：具体控制原理见3.5.1章节</font>）</p>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Forlinx Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">07 power timing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><font style="color:#ff0000;">     </font>目前开发板的上电时序是：5V经过自恢复保险丝、防反接二极管、过压保护电路，首先VDD_5V、VDD_3V3上电，因此核心板先上电。核心板上电后通过CPU的PMIC_ON_REQ引脚控制底板GEN_5V和GEN_3V3上电；CPU的PERI_PWREN控制VPERI_3V3上电，并通过U11转为NVCC_CSI给摄像头部分供电。（<font style="color:#ff0000;">注：具体控制原理见3.5.1章节</font>）</p>
 <p>精简电路参考如下：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/50461850/1742524080905-00d21745-6296-4ef8-a59a-9f4583b7dee8.png" /></p>
 <p><strong>注：</strong></p>
 <p><strong>1、如果客户供电稳定则可去掉OVP保护电路；</strong></p>
 <p><strong>2、核心板i.MX6UL-CSI部分的电压（NVCC_CSI）由底板供电。客户可以根据自己使用的外设的引脚电平来进行配置。例如外接2.8V的摄像头，则需要使用XC6219B282MR芯片转成2.8V给NVCC_CSI供电；如果所接外设引脚电平为3.3V，则不需要使用XC6219B282MR芯片，直接由GEN_3V3给NVCC_CSI供电；</strong></p>
-<p><strong>3、选择启动配置的拨码开关部分由GEN_3V3供电。</strong></p></div>
-        
-        
-    </div>
-
-    
-      <footer class="col-md-12 text-center">
-          
-          
-            <hr>
-            <p>
-            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-            </p>
-          
-
-          
-          
-      </footer>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
-
-    
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
-        
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    <script>var base_url = "../.."</script>
-    
-    <script src="../../js/base.js"></script>
-    <script src="../../search/main.js"></script>
-
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+<p><strong>3、选择启动配置的拨码开关部分由GEN_3V3供电。</strong></p>
+              
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
 </div>
-    </body>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
 
+</body>
 </html>
